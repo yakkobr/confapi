@@ -1,0 +1,10 @@
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'your_secret_key'
+
+#Local app config
+
+ENDPOINT_OPTIONS = ['example_zabbix_prod_endpoint',
+                    'example_zabbix_dev_endpoint',
+                    'another_example_endpoint']
+
+ENDPOINT_DOC = 'http://zabbix.endpoint.yours/doc_example/'

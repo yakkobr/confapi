@@ -1,0 +1,60 @@
+{
+	"createBasicMonitors" : {
+		"host" : {"optional":0, "type":0, "default":"", "values" : []},
+		"ip" : {"optional":0, "type":0, "default":"", "values":[]},
+		"clientgroup" : {"optional":1, "type":0, "default":"", "values":[]}
+	},
+	"createServiceMonitors" : {
+		"host" : {"optional":0, "type":0, "default":"", "values":[]},
+		"ip" : {"optional":0, "type":0, "default":"", "values":[]},
+		"alarm" : {"optional":1, "type":2, "default":"no", "values":["no", "yes", "group"]},
+		"service" : {"optional":0, "type":2, "default":"", "values":["cachos"]}
+	},
+	"createWebMonitors":{
+		"address" : {"optional":0, "type":0, "default":"", "values":[]},
+		"port" : {"optional":1, "type":0, "default":"80", "values":[]},
+		"regexp" : {"optional":1, "type":0, "default":"WORKING", "values":[]},
+		"uri" : {"optional":1, "type":0, "default":"/healtcheck.html", "values":[]},
+		"var" : {"optional":1, "type":0, "default":"", "values":[]},
+		"clientgroup" : {"optional":1, "type":0, "default":"", "values":[]},
+		"alarm" : {"optional":1, "type":2, "default":"no", "values":["no", "yes", "group"]}
+	},
+	"createDBMonitors":{
+		"host" : {"optional":0, "type":0, "default":"", "values":[]},
+		"user" : {"optional":1, "type":0, "default":"usr_zabbix", "values":[]},
+		"password" : {"optional":1, "type":0, "default":"", "values":[]},
+		"port" : {"optional":1, "type":0, "default":"", "values":[]},
+		"dbtype" : {"optional":0, "type":2, "default":"", "values":["mysql", "mongodb"]},
+
+		"clientgroup" : {"optional":1, "type":0, "default":"", "values":[]},
+		"alarm" : {"optional":1, "type":2, "default":"no", "values":["no", "yes", "group"]},
+		
+		"slave_running" : {"optional":1, "type":0, "default":"0", "values":[]},
+		"seconds_behind_master" : {"optional":1, "type":0, "default":"600", "values":[]},
+		"healtcheck" : {"optional":1, "type":1, "default":"", "values":[]},
+		"healtcheck_monitor" : {"optional":1, "type":1, "default":"", "values":[]},
+
+		"arbiter" : {"optional":1, "type":0, "default":"0", "values":[]}
+	},
+	"deleteMonitors":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []}
+	},
+	"disableMonitors":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []}
+	},
+	"enableMonitors":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []}
+	},
+	"disableAlarms":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []}
+	},
+	"enableAlarms":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []}
+	},
+	"generateGraphs":{
+		"host" : {"optional":0, "type":0, "default":"", "values" : []},
+		"period" : {"optional":1, "type":0, "default":"", "values" : []},
+		"width" : {"optional":1, "type":0, "default":"", "values" : []},
+		"height" : {"optional":1, "type":0, "default":"", "values" : []}
+	}
+}

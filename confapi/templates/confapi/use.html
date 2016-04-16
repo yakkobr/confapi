@@ -1,0 +1,76 @@
+{% load staticfiles %}
+{% include "confapi/header.html" %}
+{% include "confapi/navbar.html" %}
+<div class="container">
+	<form role= "form" action="" method="post" id="useForm">
+
+
+    <div class="row use_area1">
+      <hr>
+      <div class="col-md-4">
+        <h3 class="text-center header_help">1. Informe os Acessos</h3><br>
+        <div id='selector-inputbox'>
+
+          <select class="form-control sel selectEndPoint" name="z_endpoint" data-toogle="tooltip" title="Escolha um valor para este campo!" id="red-tooltip"  required>
+            <option disabled style='display:none;'>EndPoint</option>
+            {% if endpoint_options %}
+              {% for endpoint_option in endpoint_options %}
+                <option>{{ endpoint_option }}</option>
+              {% endfor %}
+            {% endif %}
+            <option><i>Editar...</i></option>
+            {% if z_endpoint %} <option selected style='display:none;'>{{ z_endpoint }}</option> {% endif %}
+          </select>
+        </div>
+        <div class='col-md-offset-5 https-button-area'>
+         <label class="btn btn-default btn-sm" data-toggle="buttons"><input type="checkbox" id="https" name="z_https" style='display:none;'>HTTPS</label>
+        </div>
+
+        <div class="col-md-6">
+          <input type="text" class="form-control" name="z_username" required placeholder="username"  value= "{{ z_username }}"/>
+        </div>
+
+
+
+        <div class="col-md-6">
+          <input type="password" class="form-control" name="z_password" required placeholder="password"  value= "{{ z_password }}">
+        </div>
+        <br><br>
+  
+
+        <hr>
+
+        <h3 class="text-center header_help">2. Selecione a Função</h3>
+        <div id='selector-input-function'><select multiple class="form-control   selectFunction" required name="function" style="height:250px; font-size:19px;"></select></div>
+      </div>
+      <div class="col-md-8">
+        <div class="txt">
+          {% if post %}
+              <br><br><h3 class="text-center header_help">Resposta</h3>
+              {% if error %}
+                <div class="highlight_error">
+                  {{ response }}
+                </div>
+              {% else %} 
+                <div class="highlight">
+                  {{ response }}
+                </div>
+              {% endif %}
+
+          {% endif %}
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row use_area2">
+      
+    </div>
+ 
+
+    
+	  {% csrf_token %}
+  </form>
+  <hr>
+</div>
+{% include "confapi/footer.html" %}
