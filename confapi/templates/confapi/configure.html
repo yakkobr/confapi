@@ -1,0 +1,57 @@
+{% load staticfiles %}
+{% include "confapi/header.html" %}
+{% include "confapi/navbar.html" %}
+<div class="container">
+  <form role= "form" action="" method="post">
+          <div class="row use_area">
+          <div class="divider_bar_top"></div> 
+          <hr>
+          <h3 class="text-center header_help">Configure</h3><br>
+
+            <div class="col-md-3">
+              <input type='text' class='form-control' name='GROUP_OP_SERVICO' placeholder='GROUP_OP_SERVICO (96)'><br>
+              <input type='text' class='form-control' name='GROUP_OP_SERVIDOR' placeholder='GROUP_OP_SERVIDOR (98)'><br>
+              <input type='text' class='form-control' name='GROUP_OP' placeholder='GROUP_OP (83)'><br>
+              <input type='text' class='form-control' name='GROUP_OS_LINUX' placeholder='GROUP_OS_LINUX (15)'><br>
+              <input type='text' class='form-control' name='GROUP_DB' placeholder='GROUP_DB (55)'><br>
+              <input type='text' class='form-control' name='GROUP_MYSQL' placeholder='GROUP_MYSQL (70)'><br>
+
+            </div>
+ 
+            <div class="col-md-3"> 
+              <input type='text' class='form-control' name='GROUP_MONGO' placeholder='GROUP_MONGO (68)'><br>
+              <input type='text' class='form-control' name='TEMPLATE_VT' placeholder='TEMPLATE_VT (10069)'><br>
+              <input type='text' class='form-control' name='TEMPLATE_MYSQL' placeholder='TEMPLATE_MYSQL (10215)'><br>
+              <input type='text' class='form-control' name='TEMPLATE_MONGODB' placeholder='TEMPLATE_MONGODB (18072)'><br>
+              <input type='text' class='form-control' name='TEMPLATE_WEBMONITOR' placeholder='TEMPLATE_WEBMONITOR (18981)'><br>
+              <input type='text' class='form-control' name='TEMPLATE_HEALTHCHECK' placeholder='TEMPLATE_HEALTHCHECK (18045)'><br>        
+            </div>
+
+            <div class="col-md-3">              
+              <input type='text' class='form-control' name='PRX_DBFORBIX' placeholder='PRX_DBFORBIX (10121)'><br>
+              <input type='text' class='form-control' name='PRX_MONGO' placeholder='PRX_MONGO (10122)'><br>
+              <input type='text' class='form-control' name='PRX_DEFAULT' placeholder='PRX_DEFAULT (10106)'><br>
+              <input type='text' class='form-control' name='PRX_WEBMONITOR' placeholder='PRX_WEBMONITOR (10109)'><br>
+              <input type='text' class='form-control' name='SNMP_PORT' placeholder='SNMP_PORT (161)'><br>
+              <input type='text' class='form-control' name='AGENT_PORT' placeholder='AGENT_PORT (10500)'><br>  
+            </div>
+            
+            <div class="col-md-3">              
+              <input type='text' class='form-control' name='MONGO_USER' placeholder='MONGO_USER (usr_zabbix)'><br>
+              <input type='text' class='form-control' name='MONGO_PASS' placeholder='MONGO_PASS (**********)'><br>
+              <input type='text' class='form-control' name='DBFORBIX_USER' placeholder='DBFORBIX_USER (usr_zabbix)'><br>
+              <input type='text' class='form-control' name='DBFORBIX_PASS' placeholder='DBFORBIX_PASS (**********)'><br>
+              <input type='text' class='form-control' name='MONGO_DEFAULT_PORT' placeholder='MONGO_DEFAULT_PORT (27017)'><br>
+              <input type='text' class='form-control' name='MYSQL_DEFAULT_PORT' placeholder='MYSQL_DEFAULT_PORT (3306s)'><br>
+            </div>
+            <div class='col-md-4 col-md-offset-4'>
+              <br><button type='submit' class='btn-lg btn-block btn-primary'>Enviar Parâmetros!</button>
+            </div> 
+          </div>
+
+
+  {% csrf_token %}
+  </form>
+<hr>
+</div>
+{% include "confapi/footer.html" %}

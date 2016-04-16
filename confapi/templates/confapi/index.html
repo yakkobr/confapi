@@ -1,0 +1,60 @@
+{% include "confapi/header.html" %}
+{% include "confapi/navbar.html" %}
+    <!-- Carousel
+    ================================================== -->
+    
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img data-src="holder.js/1280x500/auto/#0669de:#0669de/text:Configurar API" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><div class = "globo_font">Configure e Administre a GBIX API</div></h1>
+              <p>Aqui você pode alterar as funções da API GBIX de uma forma bem fácil.<br>É possível alterar ou cadastrar novos hostgroups, templates, proxies, macros e mais com apenas alguns cliques!</p>
+              <p><a class="btn btn-lg btn-default comingSoon" href="#" role="button" rel="tooltip" data-original-title='Essa funcionalidade será disponibilizada em breve :)' id="red-tooltip"><span class="glyphicon glyphicon-wrench"></span> Configurar a API</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/1280x500/auto/#2D0979:#2D0979/text:Utilizar API!" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><div class = "globo_font">Teste a GBIX API</div></h1>
+              <p><br>Utilize e teste a GBIX API de forma super iterativa através do seu browser!</p>
+              <p><a class="btn btn-lg btn-success" href="use" role="button"><span class="glyphicon glyphicon-log-in"></span> Utilizar a API</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/1280x500/auto/#555:#5a5a5a/text:Extras" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><div class = "globo_font">Funções Adicionais</div></h1>
+              <p>Nesta seção você encontrará funções adicionais não implementadas nativamente pelo Zabbix, como alterações/inclusões/exclusões em massa, filtragens por expressões regulares e muito mais!</p>
+              <p><a class="btn btn-lg btn-primary comingSoon" href="#" role="button" rel="tooltip" data-original-title='Essa funcionalidade será disponibilizada em breve :)' id="red-tooltip"><span class="glyphicon glyphicon-plus"></span> Extras</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img data-src="holder.js/1280x500/auto/#812323:#812323/text:Ajuda" alt="Fourth slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1><div class = "globo_font">Veja a Documentação</div></h1>
+              <p><br>Veja aqui a documentação da GBIX API!</p>
+              <p><a class="btn btn-lg btn-primary" data-toggle="modal" data-target="#helpModal" data-remote="{% url 'confapi:help' %}" ><span class="glyphicon glyphicon-info-sign"></span> Ajuda</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+{% include "confapi/footer.html" %}
