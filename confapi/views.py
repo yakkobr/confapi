@@ -77,7 +77,7 @@ def use(request):
                         function_params[k] = ast.literal_eval(v)
                     else:
                         function_params[k] = v
-        function = 'globo.' + function_params.pop('function') if not re.search('^.+\..+$', function_params[
+        function = 'gbix.' + function_params.pop('function') if not re.search('^.+\..+$', function_params[
             'function']) else function_params.pop('function')
         https = access_params.get('z_https', False)
         if not re.match('^http', access_params['z_endpoint']):
